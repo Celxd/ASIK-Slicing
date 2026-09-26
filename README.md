@@ -20,7 +20,6 @@ ASIK-Slicing/
 ├── components/             ## Folder untuk menyimpan komponen-komponen UI
 ├── pages/                  ## Folder untuk menyimpan halaman-halaman web
 ├── .gitignore
-├── index.html              ## File utama untuk website kita
 ├── README.md
 └── tailwind.config.js
 ``` 
