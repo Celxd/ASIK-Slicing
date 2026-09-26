@@ -7,8 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <header>
-      <!-- taro navbar di sini -->
+    <header class="sticky top-0 ">
+      <nav class="flex items-center justify-between bg-[#7A3D21] px-[90px] h-[90px]">
+        <div class="flex flex-row items-center gap-16">
+          <!-- left side -->
+          <img class="w-[132.79px]" src="assets\images\navbar-logo.svg" alt="Home" />
+          <ul class="text-[#C07E4E] text-[2rem]">
+            <a class="text-[#F9DCB4] underline" href="">Home</a>
+            <a class="hover:text-[#F9DCB4]" href="">Tema</a>
+            <a class="hover:text-[#F9DCB4]" href="">Materi</a>
+            <a class="hover:text-[#F9DCB4]" href="">Asik</a>
+          </ul>
+        </div>
+        <div class="flex flex-row items-center gap-3">
+          <!-- right side -->
+           <img class="w-11" src="assets\images\x-logo.svg" alt="X">
+          <img class="w-11" src="assets\images\tiktok-logo.svg" alt="TikTok">
+          <img class="w-11" src="assets\images\ig-logo.svg" alt="Instagram">
+          <img class="w-11" src="assets\images\yt-logo.svg" alt="Youtube">
+        </div>
+      </nav>
     </header>
   </body>
 </html>
