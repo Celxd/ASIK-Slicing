@@ -5,28 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asik slicing</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
   </head>
-  <body>
-    <header class="sticky top-0 ">
-      <nav class="flex items-center justify-between bg-[#7A3D21] px-[90px] h-[90px]">
-        <div class="flex flex-row items-center gap-16">
-          <!-- left side -->
-          <img class="w-[132.79px]" src="..\assets\images\navbar-logo.svg" alt="Home" />
-          <ul class="text-[#C07E4E] text-[2rem]">
-            <a class="text-[#F9DCB4] underline" href="">Home</a>
-            <a class="hover:text-[#F9DCB4]" href="">Tema</a>
+  <body class="font-Zelda">
+    <!-- start navbar -->
+    <header class="sticky top-0">
+      <nav class="flex items-center justify-between bg-[#7A3D21] px-6 lg:px-[90px] h-[90px] border-b-[#4C1C0E] border-b-8">
+        <!-- left side -->
+        <div class="flex flex-row items-center gap-15">
+          <img class="h-12 lg:h-14 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
+          <!-- lg screen only -->
+          <ul class="text-[#C07E4E] text-[2rem] hidden lg:flex lg:flex-row gap-[4rem]">
+            <a class="hover:text-[#F9DCB4]" href="">Home</a>
+            <a class="text-[#F9DCB4] underline" href="">Tema</a>
             <a class="hover:text-[#F9DCB4]" href="">Materi</a>
             <a class="hover:text-[#F9DCB4]" href="">Asik</a>
           </ul>
         </div>
         <div class="flex flex-row items-center gap-3">
           <!-- right side -->
-           <img class="w-11" src="..\assets\images\x-logo.svg" alt="X">
-          <img class="w-11" src="..\assets\images\tiktok-logo.svg" alt="TikTok">
-          <img class="w-11" src="..\assets\images\ig-logo.svg" alt="Instagram">
-          <img class="w-11" src="..\assets\images\yt-logo.svg" alt="Youtube">
+          <div class="hidden lg:flex lg:flex-row items-center gap-3">
+            <!-- lg screen -->
+            <img class="w-11" src="/assets/images/x-logo.svg" alt="X" />
+            <img class="w-11" src="../assets/images/tiktok-logo.svg" alt="TikTok" />
+            <img class="w-11" src="../assets/images/ig-logo.svg" alt="Instagram" />
+            <img class="w-11" src="../assets/images/yt-logo.svg" alt="Youtube" />
+          </div>
+          <!-- sm screen -->
+          <button id="hamburgerBtn" class="flex lg:hidden items-center justify-center w-[42px] h-[42px] bg-[#5C2E17] rounded-lg z-[60]">
+            <img id="iconHamburger" src="/assets/images/menu.svg" alt="hamburger" class="h-[24px] w-[24px]" />
+            <img id="iconClose" src="/assets/images/x.svg" alt="hamburger" class="h-[24px] w-[24px] hidden" />
+          </button>
         </div>
       </nav>
+
+      <!-- sm screen sidebar -->
+      <div id="mobileMenu" class="lg:hidden bg-[#F3E5D0] text-3xl fixed inset-0 translate-x-full z-[50] transition-transform duration-250 ease-in-out">
+        <div class="h-[90px] bg-[#743D21] flex items-center px-6">
+          <img class="h-12 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
+        </div>
+
+        <!-- nav texts -->
+        <ul class="flex flex-col items-center text-center py-6">
+          <li class="w-full text-[#C07E4E] py-5">
+            <a class="" href="">Home</a>
+          </li>
+          <li class="w-full text-[#7A3D21] py-5">
+            <a class="underline" href="">Tema</a>
+          </li>
+          <li class="w-full text-[#C07E4E] py-5">
+            <a class="" href="">Materi</a>
+          </li>
+          <li class="w-full text-[#C07E4E] py-5">
+            <a class="" href="">Asik</a>
+          </li>
+        </ul>
+
+        <!-- icons -->
+        <div class="flex flex-row items-center justify-center gap-4">
+          <img class="w-11 text-[#C07E4E]" src="/assets/images/x-logo-dark.svg" alt="X" />
+          <img class="w-11" src="../assets/images/tiktok-logo-dark.svg" alt="TikTok" />
+          <img class="w-11" src="../assets/images/ig-logo-dark.svg" alt="Instagram" />
+          <img class="w-11" src="../assets/images/yt-logo-dark.svg" alt="Youtube" />
+        </div>
+      </div>
     </header>
+    <script src="/assets/js/mobileNav.js"></script>
   </body>
 </html>
