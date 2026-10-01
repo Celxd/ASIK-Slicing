@@ -6,6 +6,19 @@
     <title>Asik slicing</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/assets/css/global.css" />
+      <style>
+    .font-times {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .faq-item.is-open .faq-header {
+      transform: scale(1.025);
+    }
+
+    .faq-header {
+      transition: transform .2s ease;
+    }
+  </style>
   </head>
   <body class="font-Zelda">
     <!-- start navbar -->
@@ -71,5 +84,119 @@
       </div>
     </header>
     <script src="/assets/js/mobileNav.js"></script>
+
+    
+    <main> 
+      
+      <!-- SECTION FAQ -->
+      <section class="w-full min-h-screen 
+                      bg-[url('../assets/images/BG.png')] md:bg-[url('../assets/images/bg-faq.svg')] 
+                      bg-cover bg-top bg-no-repeat 
+                      pt-16 md:pt-24 pb-20 px-4 md:px-10 flex flex-col items-center">
+        <!-- Judul FAQ -->
+        <h2 class="font-thin text-6xl md:text-8xl text-[#FFFFFF] uppercase tracking-wider text-center mb-8 md:mb-12
+                  [text-shadow:0_3px_0_#7A3D21] md:[text-shadow:0_9px_0_#7A3D21]">
+          FAQ
+        </h2>
+        <!-- List FAQ (Mobile: 340px, gap 16px | Desktop: 1260px, gap 32px) -->
+        <div class="w-[340px] md:w-full md:max-w-[1260px] flex flex-col gap-4 md:gap-8 mx-auto">
+
+          <!-- BOX  1 -->
+          <div class="faq-item w-full">
+            <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+              <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+                Apa itu Simetri ?
+              </span>
+              <button type="button" aria-label="Buka jawaban"
+                      class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+                <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300" src="../assets/images/Extend.png" alt="Arrow" />
+              </button>
+            </div>
+            <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+              <p class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+                Simetri adalahh....
+              </p>
+            </div>
+          </div>
+
+          <!-- BOX 2 -->
+          <div class="faq-item w-full">
+            <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+              <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+                Apa itu Simetri ?
+              </span>
+              <button type="button" aria-label="Buka jawaban"
+                      class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+                <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300" src="../assets/images/Extend.png" alt="Arrow" />
+              </button>
+            </div>
+            <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+              <p class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+                Simetri adalahh....
+              </p>
+            </div>
+          </div>
+
+          <!-- BOX ITEM 3 -->
+          <div class="faq-item w-full">
+            <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+              <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+                Apa itu Simetri ?
+              </span>
+              <button type="button" aria-label="Buka jawaban"
+                      class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+                <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300" src="../assets/images/Extend.png" alt="Arrow" />
+              </button>
+            </div>
+            <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+              <p class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+                Simetri adalahh....
+              </p>
+            </div>
+          </div>
+
+        </div>
+            </div>
+      </section>
+    </main>
+
+    <style>
+      .faq-item.is-open .faq-header { transform: scale(1.025); }
+      .faq-header { transition: transform .2s ease; }
+    </style>
+
+    <script>
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.querySelector('.faq-header').addEventListener('click', () => {
+          const content = item.querySelector('.faq-content');
+          const icon = item.querySelector('.faq-icon');
+          const open = item.classList.toggle('is-open');
+          content.classList.toggle('hidden', !open);
+          icon.classList.toggle('rotate-180', open);
+        });
+      });
+    </script>
+
   </body>
 </html>
