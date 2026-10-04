@@ -1,112 +1,243 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asik slicing</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/assets/css/global.css" />
-  </head>
-  <body class="font-Zelda">
-    <!-- start navbar -->
-    <header class="sticky top-0">
-      <nav class="flex items-center justify-between bg-[#7A3D21] px-6 lg:px-[90px] h-[90px] border-b-[#4C1C0E] border-b-8">
-        <!-- left side -->
-        <div class="flex flex-row items-center gap-15">
-          <img class="h-12 lg:h-14 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
-          <!-- lg screen only -->
-          <ul class="text-[#C07E4E] text-[2rem] hidden lg:flex lg:flex-row gap-[4rem]">
-            <a class="hover:text-[#F9DCB4]" href="">Home</a>
-            <a class="text-[#F9DCB4] underline" href="">Tema</a>
-            <a class="hover:text-[#F9DCB4]" href="">Materi</a>
-            <a class="hover:text-[#F9DCB4]" href="">Asik</a>
-          </ul>
-        </div>
-        <div class="flex flex-row items-center gap-3">
-          <!-- right side -->
-          <div class="hidden lg:flex lg:flex-row items-center gap-3">
-            <!-- lg screen -->
-            <img class="w-11" src="/assets/images/x-logo.svg" alt="X" />
-            <img class="w-11" src="../assets/images/tiktok-logo.svg" alt="TikTok" />
-            <img class="w-11" src="../assets/images/ig-logo.svg" alt="Instagram" />
-            <img class="w-11" src="../assets/images/yt-logo.svg" alt="Youtube" />
-          </div>
-          <!-- sm screen -->
-          <button id="hamburgerBtn" class="flex lg:hidden items-center justify-center w-[42px] h-[42px] bg-[#5C2E17] rounded-lg z-[60]">
-            <img id="iconHamburger" src="/assets/images/menu.svg" alt="hamburger" class="h-[24px] w-[24px]" />
-            <img id="iconClose" src="/assets/images/x.svg" alt="hamburger" class="h-[24px] w-[24px] hidden" />
-          </button>
-        </div>
-      </nav>
 
-      <!-- sm screen sidebar -->
-      <div id="mobileMenu" class="lg:hidden bg-[#F3E5D0] text-3xl fixed inset-0 translate-x-full z-[50] transition-transform duration-250 ease-in-out">
-        <div class="h-[90px] bg-[#743D21] flex items-center px-6">
-          <img class="h-12 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asik slicing</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/css/global.css" />
+  <style>
+    .font-times {
+      font-family: "Times New Roman", Times, serif;
+    }
 
-        <!-- nav texts -->
-        <ul class="flex flex-col items-center text-center py-6">
-          <li class="w-full text-[#C07E4E] py-5">
-            <a class="" href="">Home</a>
-          </li>
-          <li class="w-full text-[#7A3D21] py-5">
-            <a class="underline" href="">Tema</a>
-          </li>
-          <li class="w-full text-[#C07E4E] py-5">
-            <a class="" href="">Materi</a>
-          </li>
-          <li class="w-full text-[#C07E4E] py-5">
-            <a class="" href="">Asik</a>
-          </li>
+    .faq-item.is-open .faq-header {
+      transform: scale(1.025);
+    }
+
+    .faq-header {
+      transition: transform .2s ease;
+    }
+  </style>
+</head>
+
+<body class="font-Zelda">
+  <!-- start navbar -->
+  <header class="sticky top-0 z-[60]">
+    <nav
+      class="flex items-center justify-between bg-[#7A3D21] px-6 lg:px-[90px] h-[90px] border-b-[#4C1C0E] border-b-8">
+      <!-- left side -->
+      <div class="flex flex-row items-center gap-15">
+        <img class="h-12 lg:h-14 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
+        <!-- lg screen only -->
+        <ul class="text-[#C07E4E] text-[2rem] hidden lg:flex lg:flex-row gap-[4rem]">
+          <a class="hover:text-[#F9DCB4]" href="">Home</a>
+          <a class="text-[#F9DCB4] underline" href="">Tema</a>
+          <a class="hover:text-[#F9DCB4]" href="">Materi</a>
+          <a class="hover:text-[#F9DCB4]" href="">Asik</a>
         </ul>
+      </div>
+      <div class="flex flex-row items-center gap-3">
+        <!-- right side -->
+        <div class="hidden lg:flex lg:flex-row items-center gap-3">
+          <!-- lg screen -->
+          <img class="w-11" src="/assets/images/x-logo.svg" alt="X" />
+          <img class="w-11" src="../assets/images/tiktok-logo.svg" alt="TikTok" />
+          <img class="w-11" src="../assets/images/ig-logo.svg" alt="Instagram" />
+          <img class="w-11" src="../assets/images/yt-logo.svg" alt="Youtube" />
+        </div>
+        <!-- sm screen -->
+        <button id="hamburgerBtn"
+          class="flex lg:hidden items-center justify-center w-[42px] h-[42px] bg-[#5C2E17] rounded-lg z-[60]">
+          <img id="iconHamburger" src="/assets/images/menu.svg" alt="hamburger" class="h-[24px] w-[24px]" />
+          <img id="iconClose" src="/assets/images/x.svg" alt="hamburger" class="h-[24px] w-[24px] hidden" />
+        </button>
+      </div>
+    </nav>
 
-        <!-- icons -->
-        <div class="flex flex-row items-center justify-center gap-4">
-          <img class="w-11 text-[#C07E4E]" src="/assets/images/x-logo-dark.svg" alt="X" />
-          <img class="w-11" src="../assets/images/tiktok-logo-dark.svg" alt="TikTok" />
-          <img class="w-11" src="../assets/images/ig-logo-dark.svg" alt="Instagram" />
-          <img class="w-11" src="../assets/images/yt-logo-dark.svg" alt="Youtube" />
+    <!-- sm screen sidebar -->
+    <div id="mobileMenu"
+      class="lg:hidden bg-[#F3E5D0] text-3xl fixed inset-0 translate-x-full z-[50] transition-transform duration-250 ease-in-out">
+      <div class="h-[90px] bg-[#743D21] flex items-center px-6">
+        <img class="h-12 w-auto" src="/assets/images/navbar-logo.svg" alt="Home" />
+      </div>
+
+      <!-- nav texts -->
+      <ul class="flex flex-col items-center text-center py-6">
+        <li class="w-full text-[#C07E4E] py-5">
+          <a class="" href="">Home</a>
+        </li>
+        <li class="w-full text-[#7A3D21] py-5">
+          <a class="underline" href="">Tema</a>
+        </li>
+        <li class="w-full text-[#C07E4E] py-5">
+          <a class="" href="">Materi</a>
+        </li>
+        <li class="w-full text-[#C07E4E] py-5">
+          <a class="" href="">Asik</a>
+        </li>
+      </ul>
+
+      <!-- icons -->
+      <div class="flex flex-row items-center justify-center gap-4">
+        <img class="w-11 text-[#C07E4E]" src="/assets/images/x-logo-dark.svg" alt="X" />
+        <img class="w-11" src="../assets/images/tiktok-logo-dark.svg" alt="TikTok" />
+        <img class="w-11" src="../assets/images/ig-logo-dark.svg" alt="Instagram" />
+        <img class="w-11" src="../assets/images/yt-logo-dark.svg" alt="Youtube" />
+      </div>
+    </div>
+  </header>
+  <script src="/assets/js/mobileNav.js"></script>
+
+  <main>
+    <section
+      class="relative min-h-[100svh] w-full overflow-hidden bg-[url('../assets/images/bg-hero-mobile.svg')] 
+          md:bg-[url('../assets/images/bg-hero.svg')] bg-cover bg-bottom bg-no-repeat flex flex-col items-center justify-center px-4">
+      <!-- Title + subtitle -->
+      <div class="relative z-10 flex flex-col items-center -mt-20 md:-mt-32">
+        <h1 class="title-outline text-center leading-none text-[48px] sm:text-7xl md:text-8xl lg:text-9xl">
+          SIMETRI 2026
+        </h1>
+      </div>
+      <div
+        class="mt-3 md:mt-6 max-w-[320px] md:max-w-none px-8 py-4 md:px-16 md:py-4 bg-[url('../assets/images/kertas-hero-mobile.png')] md:bg-[url('../assets/images/kertas-hero.png')] bg-[length:100%_100%] bg-no-repeat">
+        <p class="font-serif text-base sm:text-lg md:text-2xl text-[#7a3e24] text-center md:whitespace-nowrap ">
+          Build your personal website from zero to hero
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section class="w-full min-h-screen 
+                      bg-[url('../assets/images/BG.png')] md:bg-[url('../assets/images/bg-faq.svg')] 
+                      bg-cover bg-top bg-no-repeat 
+                      pt-16 md:pt-24 pb-20 px-4 md:px-10 flex flex-col items-center">
+      <!-- Judul FAQ -->
+      <h2 class="font-thin text-6xl md:text-8xl text-[#FFFFFF] uppercase tracking-wider text-center mb-8 md:mb-12
+                  [text-shadow:0_3px_0_#7A3D21] md:[text-shadow:0_9px_0_#7A3D21] mt-36">
+        FAQ
+      </h2>
+      <!-- List FAQ (Mobile: 340px, gap 16px | Desktop: 1260px, gap 32px) -->
+      <div class="w-[340px] md:w-full md:max-w-[1260px] flex flex-col gap-4 md:gap-8 mx-auto">
+
+        <!-- BOX  1 -->
+        <div class="faq-item w-full">
+          <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+              Apa itu Simetri ?
+            </span>
+            <button type="button" aria-label="Buka jawaban"
+              class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+              <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300"
+                src="../assets/images/Extend.png" alt="Arrow" />
+            </button>
+          </div>
+          <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+            <p
+              class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+              Simetri adalahh....
+            </p>
+          </div>
+        </div>
+
+        <!-- BOX 2 -->
+        <div class="faq-item w-full">
+          <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+              Apa itu Simetri ?
+            </span>
+            <button type="button" aria-label="Buka jawaban"
+              class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+              <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300"
+                src="../assets/images/Extend.png" alt="Arrow" />
+            </button>
+          </div>
+          <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+            <p
+              class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+              Simetri adalahh....
+            </p>
+          </div>
+        </div>
+
+        <!-- BOX ITEM 3 -->
+        <div class="faq-item w-full">
+          <div class="faq-header relative z-10 flex items-center justify-between cursor-pointer
+                        w-full h-[80px] md:h-[152px]
+                        py-2 px-4 md:py-[24px] md:px-[48px]
+                        bg-[#7A3D21] 
+                        border-[6px] md:border-[8px] border-[#3A1709]
+                        rounded-[20px] shadow-[0_6px_0_rgba(0,0,0,0.25)]">
+            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[48px] font-medium pr-2">
+              Apa itu Simetri ?
+            </span>
+            <button type="button" aria-label="Buka jawaban"
+              class="w-10 h-10 md:w-[68px] md:h-[68px] bg-[#4A1D0E] rounded-xl flex items-center justify-center shrink-0">
+              <img class="faq-icon w-5 h-5 md:w-8 md:h-8 transition-transform duration-300"
+                src="../assets/images/Extend.png" alt="Arrow" />
+            </button>
+          </div>
+          <div class="faq-content hidden -mt-6 md:-mt-10 mx-2 md:mx-6 pt-10 md:pt-16 pb-5 md:pb-8 px-4 md:px-[48px]
+                        bg-[#B8764F] border-[4px] md:border-[6px] border-t-0 border-[#7A3D22]
+                        rounded-b-[20px]">
+            <p
+              class="text-[#FFFFFF] font-times text-[20px] md:text-[36px] leading-snug md:leading-relaxed text-justify">
+              Simetri adalahh....
+            </p>
+          </div>
         </div>
       </div>
     </header>
     <script src="/assets/js/mobileNav.js"></script>
-
-    <!-- footer -->
-        <footer class="bg-[url(../assets/images/99.Footer/bg-footer.png)] bg-cover h-[570px] px-[100px]">
-      <!-- Frame -->
-        <div class="bg-[url(../assets/images/99.Footer/frame-footer-mobile.png)] lg:bg-[url(../assets/images/99.Footer/frame-footer.png)] bg-center bg-contain bg-no-repeat">
-          <!-- Div Utama -->
-          <div class="flex flex-col lg:flex-row items-center justify-center">
-            <!-- Footer 1 -->
-            <div class="flex flex-col p-2.5">
-              <a href="" class="text-[#C07E4E] text-[32px]">Home</a>
-              <a href="" class="text-[#C07E4E] text-[32px]">Tema</a>
-              <a href="" class="text-[#C07E4E] text-[32px]">Materi</a>
-              <a href="" class="text-[#C07E4E] text-[32px]">Asik</a>
-            </div>
-            <!-- Footer 2 -->
-            <div class="flex flex-col">
-              <p class="flex justify-center items-center text-[#F9DCB4] text-[28px]">Didukung oleh</p>
-              <!-- Logo row atas -->
-              <div class="flex flex-row items-center justify-center">
-                <img class="w-[142.05px] h-[49.75px]" src="../assets/images/99.Footer/Group 1410136690.png" alt="Sisfor ITS">
-                <img class="w-[111px] h-[42px]" src="../assets/images/99.Footer/Logo SI.png" alt="Logo SI">
-                <img class="w-[76.64px] h-[41px]" src="../assets/images/99.Footer/ITS Advancing Humanity SVG.png" alt="Depart Sisfor">
-                <img class="w-[54.39px] h-[43.61px]" src="../assets/images/99.Footer/Group 13906.png" alt="">
-              </div>
-              <!-- Logo row bawah -->
-              <div class="flex flex-row items-center justify-center">
-                <img class="w-[128.39px] h-[38.72px]" src="../assets/images/99.Footer/Logo Kabinet.png" alt=""Logo Kabinet>
-                <img class="w-[43.43px] h-[48.47px]" src="../assets/images/99.Footer/Frame 48098812.png" alt="Logo Kabinet">
-                <img class="w-[49.59px] h-[42.01px]" src="../assets/images/99.Footer/diktisaintek.png" alt="">
-                <img class="w-[86px] h-[50px]" src="../assets/images/99.Footer/Mask group.png" alt="">
-              </div>
-              <p class="text-[20px] text-[#F9DCB4] flex items-center justify-center">&copy; SIMETRI HMSI ITS</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+    <footer class="w-full bg-[url('../assets/images/99.Footer/bg-footer.png')] bg-cover bg-center px-4 py-8 md:px-[90px] md:py-[88px] md:h-[605px] flex justify-center items-center">
+      <!-- frame -->
+      <div
+        class="w-full max-w-[360px] min-h-[520px] md:max-w-none md:min-h-0 md:h-full bg-[url('../assets/images/99.Footer/frame-footer-mobile.png')] md:bg-[url('../assets/images/99.Footer/frame-footer.png')] bg-[length:100%_100%] bg-center bg-no-repeat px-6 py-14 md:px-[60px] md:py-10 flex items-center justify-center">
+        <!-- konten utama -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[100px]">
+          <!-- menu -->
+          <nav class="flex flex-col items-center md:items-start gap-3 md:gap-4">
+            <a class="text-[#F9DCB4] md:text-[#C07E4E] text-[20px] md:text-[32px]" href="">Home</a>
+            <a class="text-[#F9DCB4] md:text-[#C07E4E] text-[20px] md:text-[32px]" href="">Tema</a>
+            <a class="text-[#F9DCB4] md:text-[#C07E4E] text-[20px] md:text-[32px]" href="">Materi</a>
+            <a class="text-[#F9DCB4] md:text-[#C07E4E] text-[20px] md:text-[32px]" href="">Asik</a>
+          </nav>
+          <!-- didukung oleh -->
+          <div class="flex flex-col items-center gap-3 md:gap-4">
+            <p class="font-times text-[#F9DCB4] text-[20px] md:text-[28px]">Didukung Oleh</p>
+            <!-- logo baris atas -->
+            <div class="flex flex-row items-center justify-center gap-2 md:gap-4">
+              <img class="h-[27px] md:h-[49.75px] w-auto" src="../assets/images/99.Footer/Group 1410136690.png" alt="Departemen Sistem Informasi ITS">
+              <img class="h-[23px] md:h-[42px] w-auto" src="../assets/images/99.Footer/Logo SI.png" alt="Logo SI">
+              <img class="h-[22px] md:h-[41px] w-auto" src="../assets/images/99.Footer/ITS Advancing Humanity SVG.png" alt="ITS Advancing Humanity">
+              <img class="h-[24px] md:h-[43.61px] w-auto" src="../assets/images/99.Footer/Group 13906.png" alt="Logo HMSI">
+            </div>
+            <!-- logo baris bawah -->
+            <div class="flex flex-row items-center justify-center gap-2 md:gap-4">
+              <img class="h-[21px] md:h-[38.72px] w-auto" src="../assets/images/99.Footer/Logo Kabinet.png" alt="Logo Kabinet">
+              <img class="h-[27px] md:h-[48.47px] w-auto" src="../assets/images/99.Footer/Frame 48098812.png" alt="Logo Kabinet">
+              <img class="h-[23px] md:h-[42.01px] w-auto" src="../assets/images/99.Footer/diktisaintek.png" alt="Diktisaintek Berdampak">
+              <img class="h-[27px] md:h-[50px] w-auto" src="../assets/images/99.Footer/Mask group.png" alt="ITS">
+            </div>
+            <p class="text-[14px] md:text-[20px] text-[#F9DCB4] mt-2 md:mt-4">&copy; SIMETRI HMSI ITS</p>
+          </div>
+        </div>
+      </div>
+    </footer>  
+      </body>
 </html>
