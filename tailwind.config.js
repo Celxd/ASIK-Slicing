@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Zelda: ['Zelda', 'sans-serif'],
+        Baskervville: ['Baskervville', 'serif'],
       },
     },
   },

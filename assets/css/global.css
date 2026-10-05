@@ -8,3 +8,24 @@
 .font-Zelda {
   font-family: 'Zelda', sans-serif;
 }
+
+.font-times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.font-Baskervville {
+  font-family: "Baskervville", serif;
+}
+
+.text-outline {
+  -webkit-text-stroke: 0.5px currentColor;
+  paint-order: stroke fill;
+}
+
+.faq-item.is-open .faq-header {
+  transform: scale(1.025);
+}
+
+.faq-header {
+  transition: transform .2s ease;
+}
