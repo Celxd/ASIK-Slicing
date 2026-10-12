@@ -15,7 +15,7 @@
 
 <body class="font-Zelda">
   <!-- start navbar -->
-  <header class="sticky top-0 z-[60]">
+  <header class="sticky top-0 z-[71]">
     <nav
       class="flex items-center justify-between bg-[#7A3D21] px-6 lg:px-[90px] h-[90px] border-b-[#4C1C0E] border-b-8">
       <!-- left side -->
@@ -47,7 +47,7 @@
         </div>
         <!-- sm screen -->
         <button id="hamburgerBtn"
-          class="flex lg:hidden items-center justify-center w-[42px] h-[42px] bg-[#4C1C0E] rounded-lg">
+          class="flex lg:hidden items-center justify-center w-[42px] h-[42px] bg-[#4C1C0E] rounded-lg z-[60]">
           <img id="iconHamburger" src="/assets/images/menu.svg" alt="hamburger" class="h-[24px] w-[24px]" />
           <img id="iconClose" src="/assets/images/x.svg" alt="hamburger" class="h-[24px] w-[24px] hidden" />
         </button>
@@ -167,8 +167,26 @@
       <!-- div carousel content -->
       <div class="relative w-full overflow-hidden aspect-[611/573] lg:aspect-[1440/1024]">
         <!-- bg of content -->
-        <div class="absolute inset-0 z-0">
+        <div id="bgs" class="absolute inset-0 z-0">
           <img src="/assets/images/carousel/ignis.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/aquatic.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/ventura.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/fulgur.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/nocturna.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/verdant.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/terra.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/glacia.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/candoria.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img src="/assets/images/carousel/mecha.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
         </div>
 
@@ -191,33 +209,125 @@
 
         <!-- content -->
         <div class="absolute inset-0 z-20 overflow-hidden">
-          <div class="flex h-full">
-            <!-- one slide per realm -->
-            <div class="min-w-full h-full flex items-center justify-between px-[60px]">
-              <div class="flex flex-col gap-4 justify-center items-center">
+          <div id="track" class="flex h-full transition-transform duration-500 ease-out will-change-transform">
+
+            <!-- SLIDE IGNIS -->
+            <!-- <div class="slide min-w-full shrink-0 h-full flex flex-row justify-center items-center px-[45px] lg:px-[150px] gap-[27.21px] md:gap-[122px] xl:gap-[217px]
+                [--glow:#FF6A1A] [--btn-from:#F36F41] [--btn-to:#F39241] [--btn-lip:#6E3418] [--btn-border:#F3B641]">
+              <div class="flex flex-col gap-4 items-start">
                 <h5
                   class="text-white title-outline leading-none text-[1.5rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
                   IGNIS REALM</h5>
-                <a href=""
-                  class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[#F3B641] outline-[1px] outline-[#6E3418]/55 bg-[linear-gradient(to_bottom,#F36F41,#F39241,#F36F41,#F39241)] shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_#6E3418] transition-all duration-100 hover:brightness-110 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_#6E3418]">
+                <a href="#ignis" class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[var(--btn-border)] outline-[1px] outline-[#6E3418]/55
+                 bg-[linear-gradient(to_bottom,var(--btn-from),var(--btn-to),var(--btn-from),var(--btn-to))]
+                 shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_var(--btn-lip)]
+                 transition-all duration-100 hover:brightness-110
+                 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_var(--btn-lip)]">
                   <span
-                    class="block uppercase tracking-wide text-[0.875rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                    class="block uppercase tracking-wide text-[0.875rem] md:text-[1.313rem] xl:text-[1.75rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
                     Take me to Ignis
                   </span>
                 </a>
               </div>
-              <!-- card realm -->
-              <img src="/assets/images/carousel/card-ignis.svg"
-                class="w-[113px] lg:w-[320px] [--glow:#FF6A1A] drop-shadow-[0_0_14px_var(--glow)]" />
-            </div>
+              <img src="/assets/images/carousel/card-ignis.svg" alt="Ignis"
+                class="w-[113px] md:w-[216.5px] lg:w-[320px] drop-shadow-[0_0_14px_var(--glow)]" />
+            </div> -->
 
+            <!-- SLIDE AQUA -->
+            <!-- <div class="slide min-w-full shrink-0 h-full flex flex-row justify-center items-center px-[45px] lg:px-[150px] gap-[27.21px] md:gap-[122px] xl:gap-[217px]
+                [--glow:#41E6F3] [--btn-from:#419FF3] [--btn-to:#41C2F3] [--btn-lip:#1d486e] [--btn-border:#41E6F3]">
+              <div class="flex flex-col gap-4 items-start">
+                <h5
+                  class="text-white title-outline leading-none text-[1.5rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
+                  AQUARIA KINGDOM</h5>
+                <a href="#ignis" class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[var(--btn-border)] outline-[1px] outline-[#6E3418]/55
+                 bg-[linear-gradient(to_bottom,var(--btn-from),var(--btn-to),var(--btn-from),var(--btn-to))]
+                 shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_var(--btn-lip)]
+                 transition-all duration-100 hover:brightness-110
+                 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_var(--btn-lip)]">
+                  <span
+                    class="block uppercase tracking-wide text-[0.875rem] md:text-[1.313rem] xl:text-[1.75rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                    Take me to Aquaria
+                  </span>
+                </a>
+              </div>
+              <img src="/assets/images/carousel/card-aquatic.svg" alt="Aqua"
+                class="w-[113px] md:w-[216.5px] lg:w-[320px] drop-shadow-[0_0_14px_var(--glow)]" />
+            </div> -->
+
+            <!-- SlIDE VENTURA -->
+            <!-- <div class="slide min-w-full shrink-0 h-full flex flex-row justify-center items-center px-[45px] lg:px-[150px] gap-[27.21px] md:gap-[122px] xl:gap-[217px]
+                [--glow:#C4DCAC] [--btn-from:#4AA294] [--btn-to:#5AB3AD] [--btn-lip:#214943] [--btn-border:#C4DCAC]">
+              <div class="flex flex-col gap-4 items-start">
+                <h5
+                  class="text-white title-outline leading-none text-[1.5rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
+                  VENTURA EMPIRE</h5>
+                <a href="#ignis" class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[var(--btn-border)] outline-[1px] outline-[#6E3418]/55
+                 bg-[linear-gradient(to_bottom,var(--btn-from),var(--btn-to),var(--btn-from),var(--btn-to))]
+                 shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_var(--btn-lip)]
+                 transition-all duration-100 hover:brightness-110
+                 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_var(--btn-lip)]">
+                  <span
+                    class="block uppercase tracking-wide text-[0.875rem] md:text-[1.313rem] xl:text-[1.75rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                    Take me to Ventura
+                  </span>
+                </a>
+              </div>
+              <img src="/assets/images/carousel/card-ventura.svg" alt="Aqua"
+                class="w-[113px] md:w-[216.5px] lg:w-[320px] drop-shadow-[0_0_14px_var(--glow)]" />
+            </div> -->
+
+            <!-- SlIDE FULGUR -->
+            <!-- <div class="slide min-w-full shrink-0 h-full flex flex-row justify-center items-center px-[45px] lg:px-[150px] gap-[27.21px] md:gap-[122px] xl:gap-[217px]
+                [--glow:#FFF3C6] [--btn-from:#FF9730] [--btn-to:#FFD943] [--btn-lip:#734416] [--btn-border:#FFF3C6]">
+              <div class="flex flex-col gap-4 items-start">
+                <h5
+                  class="text-white title-outline leading-none text-[1.5rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
+                  FULGUR CLAN</h5>
+                <a href="#ignis" class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[var(--btn-border)] outline-[1px] outline-[#6E3418]/55
+                 bg-[linear-gradient(to_bottom,var(--btn-from),var(--btn-to),var(--btn-from),var(--btn-to))]
+                 shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_var(--btn-lip)]
+                 transition-all duration-100 hover:brightness-110
+                 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_var(--btn-lip)]">
+                  <span
+                    class="block uppercase tracking-wide text-[0.875rem] md:text-[1.313rem] xl:text-[1.75rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                    Take me to Fulgur
+                  </span>
+                </a>
+              </div>
+              <img src="/assets/images/carousel/card-flugur.svg" alt="Aqua"
+                class="w-[113px] md:w-[216.5px] lg:w-[320px] drop-shadow-[0_0_14px_var(--glow)]" />
+            </div> -->
+
+            <!-- SlIDE NOCTURNA -->
+            <div class="slide min-w-full shrink-0 h-full flex flex-row justify-center items-center px-[45px] lg:px-[150px] gap-[27.21px] md:gap-[122px] xl:gap-[217px]
+                [--glow:#071B47] [--btn-from:#203562] [--btn-to:#3E588F] [--btn-lip:#1c2840] [--btn-border:#C0C5CD]">
+              <div class="flex flex-col gap-4 items-start">
+                <h5
+                  class="text-white title-outline leading-none text-[1.5rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
+                  NOCTURNA ENCLAVE</h5>
+                <a href="#ignis" class="inline-block px-[10px] py-[4px] rounded-[8px] border-double border-[1px] border-[var(--btn-border)] outline-[1px] outline-[#6E3418]/55
+                 bg-[linear-gradient(to_bottom,var(--btn-from),var(--btn-to),var(--btn-from),var(--btn-to))]
+                 shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_8px_0_var(--btn-lip)]
+                 transition-all duration-100 hover:brightness-110
+                 active:translate-y-[6px] active:shadow-[inset_0_2px_0_rgba(255,255,255,0.35),0_2px_0_var(--btn-lip)]">
+                  <span
+                    class="block uppercase tracking-wide text-[0.875rem] md:text-[1.313rem] xl:text-[1.75rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                    Take me to Nocturna
+                  </span>
+                </a>
+              </div>
+              <img src="/assets/images/carousel/card-nocturna.svg" alt="Aqua"
+                class="w-[113px] md:w-[216.5px] lg:w-[320px] drop-shadow-[0_0_14px_var(--glow)]" />
+            </div>
           </div>
         </div>
 
-        <button class="absolute left-[3.75rem] opacity-50 top-1/2 -translate-y-1/2 z-30"><img
-            src="/assets/images/carousel/arrow-left-mobile.svg" alt="" class="h-[55.21px]"></button>
-        <button class="absolute right-[3.75rem] opacity-50 top-1/2 -translate-y-1/2 z-30"><img
-            src="/assets/images/carousel/arrow-right-mobile.svg" alt="" class="h-[55.21px]"></button>
+        <!-- arrow buttons -->
+        <button class="absolute left-[1.25em] lg:left-[3.75rem] opacity-50 top-1/2 -translate-y-1/2 z-30"><img
+            src="/assets/images/carousel/arrow-left-mobile.svg" alt="" class="h-[30px] lg:h-[55.21px]"></button>
+        <button class="absolute right-[1.25em] lg:right-[3.75rem] opacity-50 top-1/2 -translate-y-1/2 z-30"><img
+            src="/assets/images/carousel/arrow-right-mobile.svg" alt="" class="h-[30px] lg:h-[55.21px]"></button>
       </div>
     </section>
 
