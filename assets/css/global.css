@@ -29,3 +29,12 @@
 .faq-header {
   transition: transform .2s ease;
 }
+
+.realm-btn {
+  background: linear-gradient(to bottom, var(--btn-a), var(--btn-b), var(--btn-a), var(--btn-b));
+  border-color: var(--btn-border);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.35), 0 6px 0 var(--btn-shadow);
+}
+.realm-btn:active {
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.35), 0 2px 0 var(--btn-shadow);
+}
