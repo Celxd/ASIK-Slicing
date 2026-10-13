@@ -102,7 +102,7 @@
           md:bg-[url('../assets/images/bg-hero.svg')] bg-cover bg-bottom bg-no-repeat flex flex-col items-center justify-center px-4">
       <!-- Title + subtitle -->
       <div class="relative z-10 flex flex-col items-center -mt-20 md:-mt-32">
-        <h1 class="text-white title-outline text-center leading-none text-[4.5rem] md:text-[8rem] lg:text-[10rem]
+        <h1 class="text-white title-outline text-center leading-none text-[4.5rem] md:text-[8rem] lg:text-[160px]
                [text-shadow:0_4px_0_#7A3D21] md:[text-shadow:0_9px_0_#7A3D21]
                [-webkit-text-stroke:3px_#7a3e24] [paint-order:stroke_fill]">
           SIMETRI 2026
@@ -154,7 +154,88 @@
 
     <img class="w-full lg:hidden" src="/assets/images/upper-border-mobile.svg" alt="">
     <img class="w-0 lg:w-full" src="/assets/images/upper-border-desktop.svg" alt="">
-    <!-- tempat carousel di sini -->
+
+    <!-- carousel -->
+    <section class="sect-carousel flex flex-col w-full justify-center">
+      <!-- div title -->
+      <div
+        class="flex bg-[url('../assets/images/faq/faq-bg-mobile.svg')] lg:bg-none lg:bg-[#085857] px-[45px] py-[30px] md:py-[60px] lg:py-[80px] justify-center">
+        <div
+          class="flex bg-[url(/assets/images/carousel/rock.svg)] aspect-[293.67/95.22] bg-no-repeat min-w-[293.67px] md:min-w-[442.83px] lg:min-w-[591.98px] bg-contain items-center justify-center">
+          <p class="font-thin text-white title-outline text-center leading-none text-[2.5rem] md:text-[4rem] lg:text-[5rem] [text-shadow:0_5px_0_#071B47,1px_5px_0_#071B47,-1px_5px_0_#071B47]
+              [-webkit-text-stroke:3px_#7A3D21] [paint-order:stroke_fill] uppercase">10 KERAJAAN</p>
+        </div>
+      </div>
+
+      <!-- div carousel content -->
+      <div class="relative w-full overflow-hidden aspect-[611/573] lg:aspect-[1440/1024]">
+        <!-- backgrounds (two layers for crossfade) -->
+        <div class="absolute inset-0 z-0">
+          <img id="bgA" src="/assets/images/carousel/ignis.jpg" alt=""
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" />
+          <img id="bgB" src="" alt=""
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+        </div>
+
+        <!-- gradient filter -->
+        <div
+          class="absolute inset-0 z-[5] pointer-events-none bg-gradient-to-b from-[#1a0b2e]/100 via-transparent to-[#1a0b2e]/80">
+        </div>
+
+        <!-- cave frame (unchanged) -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <img src="/assets/images/carousel/cave-top-mobile.svg"
+            class="absolute lg:hidden top-0 left-0 w-full h-auto" />
+          <img src="/assets/images/carousel/cave-bottom-mobile.svg"
+            class="absolute lg:hidden bottom-0 left-0 w-full h-auto" />
+          <img src="/assets/images/carousel/cave-top-desktop.svg"
+            class="hidden lg:flex absolute top-[-85px] left-0 w-full h-auto" />
+          <img src="/assets/images/carousel/cave-bottom-desktop.svg"
+            class="hidden lg:flex absolute bottom-[-85px] left-0 w-full h-auto" />
+        </div>
+
+        <!-- content -->
+        <div class="absolute inset-0 z-20 flex items-center justify-between px-[48px] md:px-[110px] lg:px-[160px]">
+          <div id="realmText" class="flex flex-col gap-4 items-start transition-opacity duration-300">
+            <h5 id="realmName"
+              class="text-white title-outline leading-none text-[1.75rem] md:text-[3rem] lg:text-[5rem] [text-shadow:0_2px_0_#4C1C0E,1px_2px_0_#4C1C0E,-1px_2px_0_#4C1C0E] [-webkit-text-stroke:1px_#4C1C0E] [paint-order:stroke_fill] uppercase">
+              IGNIS REALM
+            </h5>
+            <a id="realmLink" href=""
+              style="--btn-a:#F36F41; --btn-b:#F39241; --btn-border:#F3B641; --btn-shadow:#6E3418;"
+              class="realm-btn inline-block px-[3vw] py-[1.2vw] md:px-5 md:py-2 lg:px-8 lg:py-3 rounded-[8px] border-double border-[1px] outline-[1px] outline-[#6E3418]/55 transition-all duration-100 hover:brightness-110 active:translate-y-[4px]">
+              <span id="realmBtnText"
+                class="block uppercase tracking-wide text-left leading-tight text-[3vw] md:text-[1.25rem] lg:text-[1.5rem] text-white [text-shadow:0_-1px_0_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.4)]">
+                Take me to Ignis
+              </span>
+            </a>
+          </div>
+
+          <img id="realmCard" src="/assets/images/carousel/card-ignis.svg" alt=""
+            class="w-[113px] md:w-[200px] lg:w-[320px] [--glow:#FF6A1A] drop-shadow-[0_0_14px_var(--glow)] transition-opacity duration-300" />
+        </div>
+
+        <!-- arrows -->
+        <!-- previous -->
+        <button id="prevRealm" aria-label="Previous realm"
+          class="absolute left-[2vw] md:left-[3.75rem] opacity-50 hover:opacity-100 transition-opacity top-1/2 -translate-y-1/2 z-30">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/images/carousel/arrow-left-desktop.svg">
+            <img src="/assets/images/carousel/arrow-left-mobile.svg" alt="" class="h-[6.5vw] md:h-[55.21px] w-auto">
+          </picture>
+        </button>
+
+        <!-- next -->
+        <button id="nextRealm" aria-label="Next realm"
+          class="absolute right-[2vw] md:right-[3.75rem] opacity-50 hover:opacity-100 transition-opacity top-1/2 -translate-y-1/2 z-30">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/images/carousel/arrow-right-desktop.svg">
+            <img src="/assets/images/carousel/arrow-right-mobile.svg" alt="" class="h-[6.5vw] md:h-[55.21px] w-auto">
+          </picture>
+        </button>
+      </div>
+    </section>
+
 
     <img class="w-full lg:hidden" src="/assets/images/upper-border-mobile.svg" alt="">
     <img class="w-0 lg:w-full" src="/assets/images/upper-border-desktop.svg" alt="">
@@ -180,7 +261,8 @@
                         bg-[#7A3D21] 
                         border-[6px] md:border-[8px] border-[#3A1709]
                         rounded-[24px]">
-            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
+            <span
+              class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
               Apakah Pendaftaran SIMETRI Gratis ?
             </span>
             <button type="button" aria-label="Buka jawaban"
@@ -194,7 +276,8 @@
                         rounded-b-[20px]">
             <p
               class="text-[#FFFFFF] font-thin font-times text-[20px] md:text-[26px] lg:text-[32px] leading-none md:leading-none text-justify">
-              Iya, 100% gratis tanpa biaya pendaftaran maupun biaya mengikuti kegiatan. Kamu hanya perlu membawa semangat belajar dan laptop pribadi. 🚀
+              Iya, 100% gratis tanpa biaya pendaftaran maupun biaya mengikuti kegiatan. Kamu hanya perlu membawa
+              semangat belajar dan laptop pribadi. 🚀
             </p>
           </div>
         </div>
@@ -207,7 +290,8 @@
                         bg-[#7A3D21] 
                         border-[6px] md:border-[8px] border-[#3A1709]
                         rounded-[24px]">
-            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
+            <span
+              class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
               Aku Tidak Punya Experience Dalam Coding, Apakah Boleh Ikut ?
             </span>
             <button type="button" aria-label="Buka jawaban"
@@ -221,7 +305,8 @@
                         rounded-b-[20px]">
             <p
               class="text-[#FFFFFF] font-times font-thin text-[20px] md:text-[26px] lg:text-[32px] leading-none md:leading-none text-justify">
-              Tentu boleh! Justru SIMETRI dirancang khusus untuk pemula. Semua materi akan dimulai dari dasar dan dijelaskan step by step oleh mentor yang berpengalaman.
+              Tentu boleh! Justru SIMETRI dirancang khusus untuk pemula. Semua materi akan dimulai dari dasar dan
+              dijelaskan step by step oleh mentor yang berpengalaman.
             </p>
           </div>
         </div>
@@ -234,7 +319,8 @@
                         bg-[#7A3D21] 
                         border-[6px] md:border-[8px] border-[#3A1709]
                         rounded-[24px]">
-            <span class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
+            <span
+              class="text-[#FFFFFF] font-times text-[24px] md:text-[36px] lg:text-[48px] font-thin pr-2 leading-none">
               Aku Nggak Punya Laptop, Masih Boleh Ikut?
             </span>
             <button type="button" aria-label="Buka jawaban"
@@ -248,7 +334,8 @@
                         rounded-b-[20px]">
             <p
               class="text-[#FFFFFF] font-times font-thin text-[20px] md:text-[26px] lg:text-[32px] leading-none md:leading-none text-justify">
-              Tentu boleh! Jika kamu belum memiliki laptop, panitia akan menyediakan laptop pinjaman selama kegiatan berlangsung. Jadi jangan ragu dan malu untuk daftar SIMETRI ya!
+              Tentu boleh! Jika kamu belum memiliki laptop, panitia akan menyediakan laptop pinjaman selama kegiatan
+              berlangsung. Jadi jangan ragu dan malu untuk daftar SIMETRI ya!
             </p>
           </div>
         </div>
@@ -300,18 +387,8 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.querySelector('.faq-header').addEventListener('click', () => {
-          const content = item.querySelector('.faq-content');
-          const icon = item.querySelector('.faq-icon');
-          const open = item.classList.toggle('is-open');
-          content.classList.toggle('hidden', !open);
-          icon.classList.toggle('rotate-180', open);
-        });
-      });
-    </script>
+    <script src="/assets/js/faq.js"></script>
+    <script src="/assets/js/carousel.js"></script>
   </main>
 </body>
 
